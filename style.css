@@ -1,0 +1,187 @@
+body {
+  display: flex;
+
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.svg {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+.webpage {
+  height: 500px;
+  width: 500px;
+  z-index: 1;
+  left: -10px;
+}
+.layers {
+  top: 70px;
+  position: relative;
+  transition: all ease 1800ms;
+  transform-style: preserve-3d;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+}
+.text {
+  width: auto;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.shadow {
+  display: none;
+}
+.top1,
+.top0,
+.shadow,
+.shadow1 {
+  left: 50px;
+  width: 380px;
+  top: -65px;
+  z-index: 2;
+}
+.shadow1 {
+  display: none;
+}
+.top0,
+.shadow1 {
+  top: 140px;
+}
+.file {
+  width: 470px;
+  height: 470px;
+  left: 5px;
+}
+.html,
+.css,
+.js {
+  height: 280px;
+  width: 280px;
+  left: 25px;
+}
+.layers:hover {
+  transform: perspective(1000px) rotateX(40deg) rotateY(40deg) rotatez(-25deg);
+}
+.layers:hover .shadow {
+  display: block;
+}
+.layers:hover .shadow1 {
+  display: block;
+}
+.layers:hover ~ .text {
+  display: none;
+}
+.layers:hover .top0 {
+  transform: translateZ(100px);
+}
+.layers:hover .top1 {
+  transform: translateZ(70px);
+}
+.layers:hover .html {
+  transform: translateZ(-80px) translateX(-70px) translateY(10px);
+}
+.layers:hover .css {
+  transform: translateZ(-130px) translateX(-140px) translateY(40px);
+}
+.layers:hover .js {
+  transform: translateZ(-180px) translateX(-250px) translateY(70px);
+}
+.layers:hover .file {
+  transform: translateZ(-250px) translateX(-320px) translateY(20px);
+}
+
+@media screen and (max-width: 360px) {
+  .body {
+    width: 100vw;
+  }
+  .layers {
+    height: 70vh;
+    width: 200px;
+    height: 200px;
+    left: 1vw;
+  }
+  .webpage {
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    left: -10px;
+  }
+  .top0,
+  .shadow1 {
+    top: 140px;
+  }
+  .top1,
+  .top0,
+  .shadow,
+  .shadow1 {
+    left: 50px;
+    width: 80px;
+    top: -65px;
+    z-index: 2;
+  }
+  .file {
+    width: 80px;
+    height: 80px;
+    left: 5px;
+  }
+  .top0,
+  .shadow1 {
+    top: 20px;
+  }
+  .shadow {
+    width: 140px;
+    left: 18px;
+  }
+  .top1 {
+    top: -80px;
+    width: 150px;
+    left: 18px;
+  }
+  .html,
+  .css,
+  .js {
+    height: 80px;
+    width: 80px;
+    left: 15px;
+  }
+  .text {
+    top: 200px;
+  }
+  .shadow1,
+  .shadow {
+    display: none;
+  }
+  .layers:hover .shadow {
+    display: block;
+  }
+  .layers:hover .shadow1 {
+    display: block;
+  }
+  .layers:hover ~ .text {
+    display: none;
+  }
+  .layers:hover .top0 {
+    transform: translateZ(40px);
+  }
+  .layers:hover .top1 {
+    transform: translateZ(30px);
+  }
+  .layers:hover .html {
+    transform: translateZ(-80px) translateX(25px);
+  }
+  .layers:hover .css {
+    transform: translateZ(-130px) translateX(30px);
+  }
+  .layers:hover .js {
+    transform: translateZ(-180px) translateX(35px);
+  }
+  .layers:hover .file {
+    transform: translateZ(-220px) translateX(40px);
+  }
+}
